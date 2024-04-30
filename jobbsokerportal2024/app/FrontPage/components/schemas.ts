@@ -9,3 +9,4 @@ export const jobApplicationSchema = z.object({
   image_url: z.string().url(),
   position_title: z.string(),
 });
+// test commit

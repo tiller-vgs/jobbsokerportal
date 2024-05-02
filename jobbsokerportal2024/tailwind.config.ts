@@ -20,8 +20,8 @@ const config = {
 		extend: {
 			colors: {
 				blueMain: 'rgb(58, 130, 246)',
-        lightBackground: "rgb(240, 240, 242)",
-        lightNavigation: "rgb(245, 245, 246)",
+				lightBackground: 'rgb(230, 230, 232)',
+				lightNavigation: 'rgb(240, 240, 240)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

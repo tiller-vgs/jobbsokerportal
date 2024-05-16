@@ -9,4 +9,21 @@ export const jobApplicationSchema = z.object({
   image_url: z.string().url(),
   position_title: z.string(),
 });
+
+export const LoginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(1, {
+    message: "Password cannot be empty!",
+  }),
+});
+
+export const RegisterSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6, {
+    message: "Password cannot be less than 6 characters!",
+  }),
+  name: z.string().min(1, {
+    message: "Name is required!",
+  }),
+});
 // test commit

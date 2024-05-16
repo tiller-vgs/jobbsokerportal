@@ -21,6 +21,7 @@ import {
 import filterIcon from "@/public/icons/blue/filter.png";
 import searchIcon from "@/public/icons/blue/search.png";
 import Image from "next/image";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function Navigation() {
   return (
@@ -51,7 +52,10 @@ export default function Navigation() {
           </span>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>nåkka artig</DropdownMenuLabel>
+          <DropdownMenuLabel>
+            <DropdownMenuLabel>Filtrer</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+          </DropdownMenuLabel>
         </DropdownMenuContent>
       </DropdownMenu>
 

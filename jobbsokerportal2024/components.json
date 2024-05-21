@@ -1,10 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-<<<<<<< Updated upstream
-  "style": "default",
-=======
   "style": "new-york",
->>>>>>> Stashed changes
   "rsc": true,
   "tsx": true,
   "tailwind": {

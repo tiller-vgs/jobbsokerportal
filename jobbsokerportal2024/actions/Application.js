@@ -1,12 +1,27 @@
 "use server";
 
-import { CreateApplicationSchema } from "../schemas";
+import { CreateApplicationSchema } from "@/Schemas";
+import { db } from "@/lib/db";
 
 export const CreateApplication = async (values) => {
   const validatedFields = CreateApplicationSchema.safeParse(values);
-  if (!validatedFields) {
-    return { error: "invalid fields!" };
+  console.log(validatedFields);
+  if (!validatedFields.success) {
+    return { error: "Invalid fields!" };
   }
 
-  return { success: "Successfull!" };
+  const { Stilling, beskrivelse, utlopsdato, picture, stillingstittel } =
+    validatedFields.data;
+
+  await db.Utlysninger.create({
+    data: {
+      Stilling,
+      beskrivelse,
+      utlopsdato,
+      picture,
+      stillingstittel,
+    },
+  });
+
+  return { success: "Successful registration!" }; // Corrected typo in the message
 };
